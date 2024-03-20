@@ -4,7 +4,7 @@ jobs:
   my-jobname:
     runs-on: ubuntu-latest
     env:
-      super_secret: ${{ secrets.METRICS_TOKEN }}
+      super_secret: ${{ secrets.METRICS }}
     steps:
       - if: ${{ env.super_secret != '' }}
         run: echo 'This step will only run if the secret has a value set.'

@@ -7,8 +7,12 @@
 ## Hi, 👋 I'm GAO ZHENG(gaozheng2001)
 <p align="center">
   <a href="https://github.com/gaozheng2001" class="rich-diff-level-one">
-    <img src="https://github-readme-stats.vercel.app/api?username=gaozheng2001&theme=dark" alt="gaozheng's stats">
+    <img src="https://github-readme-stats.vercel.app/api?username=gaozheng2001&theme=ambient_gradient" alt="gaozheng's stats">
   </a>  
+
+<div align="center"> <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=gaozheng2001&hide_title=true&hide_border=true&layout=compact&langs_count=6&text_color=000&icon_color=fff&bg_color=0,52fa5a,4dfcff,c64dff&theme=graywhite" /> </div>
+
+    
 </p>  
 <p align="center">
   <br><br>

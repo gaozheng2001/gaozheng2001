@@ -1,12 +1,19 @@
-name: Run a step if a secret has been set
-on: push
+name: Metrics
+on:
+  # Schedule daily updates
+  schedule: [{cron: "0 0 * * *"}]
+  # (optional) Run workflow manually
+  workflow_dispatch:
+  # (optional) Run workflow when pushing on master/main
+  push: {branches: ["master", "main"]}
 jobs:
-  my-jobname:
+  github-metrics:
     runs-on: ubuntu-latest
-    env:
-      super_secret: ${{ secrets.METRICS }}
+    environment: 
+      name: production
+    permissions:
+      contents: write
     steps:
-      - if: ${{ env.super_secret != '' }}
-        run: echo 'This step will only run if the secret has a value set.'
-      - if: ${{ env.super_secret == '' }}
-        run: echo 'This step will only run if the secret does not have a value set.'
+      - uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}

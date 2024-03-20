@@ -33,7 +33,7 @@ jobs:
           # 此插件为文档中的 🙋 Introduction
           plugin_introduction: yes
           # 此插件为文档中的 🎫 Gists
-          plugin_gists: yes
+          # plugin_gists: yes
           # 此插件为文档中的 💫 Star lists
           # plugin_starlists: yes
           # plugin_starlists_limit_repositories: 2
@@ -64,8 +64,9 @@ jobs:
           plugin_languages: yes
           plugin_languages_indepth: yes
           plugin_languages_details: lines, bytes-size
-          plugin_languages_limit: 4
+          plugin_languages_other: true
           plugin_languages_analysis_timeout: 15
+          plugin_languages_recent_days: 360
 
       # ✨ Stargazers   
       - name: Using chartist charts
@@ -191,9 +192,10 @@ jobs:
       - name: Python snippet of the day
         uses: lowlighter/metrics@latest
         with:
-          filename: metrics.plugin.code.svg
+          filename: github-metrics/code.svg
           token: ${{ secrets.METRICS }}
           base: ""
           plugin_code: yes
+          plugin_code_days: 360
           plugin_code_languages: python
           plugin_code_load: 400

@@ -89,6 +89,16 @@ jobs:
           # 设置成显示整年
           plugin_isocalendar_duration: full-year
 
+      - name: Recently played games
+        uses: lowlighter/metrics@latest
+        with:
+          filename: github-metrics/steam.svg
+          token: NOT_NEEDED
+          base: ""
+          plugin_steam_token: ${{ secrets.STEAM_TOKEN }}
+          plugin_steam: yes
+          plugin_steam_user: "76561198860554506"
+
       # 🌟 Recently starred repositories
       - name: Recently starred
         uses: lowlighter/metrics@latest

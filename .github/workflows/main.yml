@@ -98,6 +98,7 @@ jobs:
           plugin_steam_token: ${{ secrets.STEAM_TOKEN }}
           plugin_steam: yes
           plugin_steam_user: "76561198860554506"
+          plugin_steam_games_ignored: 400040
 
       # 🌟 Recently starred repositories
       - name: Recently starred

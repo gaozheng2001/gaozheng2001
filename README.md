@@ -14,8 +14,8 @@
 -->
 <div align="center"> <img src="github-metrics/languages.indepth.svg" /> </div>
 <!--
--->
 <div align="center"> <img src="github-metrics/achievements.compact.svg" /> </div>
+-->
 
 <div align="center"> <img src="github-metrics/repositories.pinned.svg" /> </div>
 

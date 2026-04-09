@@ -1,27 +1,62 @@
-<!---
+<!--
 <a href="https://github.com/gaozheng2001/gaozheng2001">
     <img align="right" src="https://komarev.com/ghpvc/?username=gaozheng2001&label=Visitors&color=red&style=flat&logo=github" alt="gtihub-visitors" />
 </a>
---->
+-->
+<!-- 新的访客统计 -->
+<a href="https://github.com/gaozheng2001/gaozheng2001">
+    <img align="right" src="https://komarev.com/ghpvc/?username=gaozheng2001&label=Visitors&color=red&style=flat&logo=github" alt="gtihub-visitors" />
+</a>
 
 ## Hi, 👋 I'm GAO ZHENG(gaozheng2001)
+
 <p align="center">
+  <!-- 原有的状态卡片（已注释） -->
+  <!-- 
   <a href="https://github.com/gaozheng2001" class="rich-diff-level-one">
     <img src="https://github-readme-stats.vercel.app/api?username=gaozheng2001&theme=ambient_gradient" alt="gaozheng's stats">
   </a>  
-<!--
-<div align="center"> <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=gaozheng2001&hide_title=true&hide_border=true&layout=compact&langs_count=6&text_color=000&icon_color=fff&bg_color=0,52fa5a,4dfcff,c64dff&theme=graywhite" /> </div>
--->
-<div align="center"> <img src="github-metrics/languages.indepth.svg" /> </div>
-<!--
-<div align="center"> <img src="github-metrics/achievements.compact.svg" /> </div>
--->
+  -->
 
-<div align="center"> <img src="github-metrics/repositories.pinned.svg" /> </div>
+  <!-- 原有的 Metrics 本地图片（已注释） -->
+  <!--
+  <div align="center"> <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=gaozheng2001&hide_title=true&hide_border=true&layout=compact&langs_count=6&text_color=000&icon_color=f[...]
+  -->
+  <!-- <div align="center"> <img src="github-metrics/languages.indepth.svg" /> </div> -->
+  <!-- <div align="center"> <img src="github-metrics/achievements.compact.svg" /> </div> -->
 
+  <!-- 新增的统计面板区域（合并了核心数据和最常用语言） -->
+  <div align="center">
+    <!-- 核心数据卡片 -->
+    <img src="https://github-readme-stats.vercel.app/api?username=gaozheng2001&show_icons=true&theme=radical&hide_border=true" width="48%" />
+    <!-- 最常用语言比例 -->
+    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=gaozheng2001&layout=compact&theme=radical&hide_border=true" width="48%" />
+  </div>
 
-    
+  <br>
+
+  <!-- GitHub Metrics 生成的置顶仓库（保留） -->
+  <div align="center"> <img src="github-metrics/repositories.pinned.svg" /> </div>
+
+  <br>
+
+  <!-- 新增的连续提交记录 (Streak) -->
+  <div align="center">
+    <img src="https://streak-stats.demolab.com?user=gaozheng2001&theme=radical&hide_border=true" />
+  </div>
+
+  <br>
+
+  <!-- 新增的贡献日历贪吃蛇动画 -->
+  <div align="center">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="github-metrics/github-contribution-grid-snake-dark.svg">
+      <source media="(prefers-color-scheme: light)" srcset="github-metrics/github-contribution-grid-snake.svg">
+      <img alt="github contribution grid snake animation" src="github-metrics/github-contribution-grid-snake.svg">
+    </picture>
+  </div>
 </p>  
+
 <p align="center">
   <br><br>
   <strong>Check out my work below!</strong>

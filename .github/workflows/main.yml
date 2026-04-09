@@ -1,11 +1,9 @@
-name: Metrics
+name: Generate Profiles
 on:
-  # Schedule daily updates
   schedule: [{cron: "0 0 * * *"}]
-  # (optional) Run workflow manually
   workflow_dispatch:
-  # (optional) Run workflow when pushing on master/main
   push: {branches: ["master", "main"]}
+
 jobs:
   github-metrics:
     runs-on: ubuntu-latest
@@ -14,32 +12,43 @@ jobs:
     permissions:
       contents: write
     steps:
-      # 基础信息（顺带了几个小插件）
+      # ==========================================
+      # 1. 生成贪吃蛇动画 (速度很快，放在前面)
+      # ==========================================
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: generate github-contribution-grid-snake.svg
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            github-metrics/github-contribution-grid-snake.svg
+            github-metrics/github-contribution-grid-snake-dark.svg?palette=github-dark
+
+      # 提交贪吃蛇动画到当前分支的 github-metrics 文件夹
+      - name: Commit snake animation
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Update snake animation"
+          file_pattern: "github-metrics/*snake*.svg"
+
+      # ==========================================
+      # 2. 原有的 lowlighter/metrics 插件
+      # ==========================================
+      # 基础信息
       - name: base
         uses: lowlighter/metrics@latest
         with:
           filename: github-metrics/base.svg
-          # Your GitHub token
           token: ${{ secrets.METRICS }}
-          # Options
           user: gaozheng2001
           template: classic
           config_timezone: Asia/Shenzhen
           base: "header, activity, community, repositories"
-          # 此插件为文档中的 🧮 Repositories traffic
           plugin_traffic: yes
-          # 此插件为文档中的 👨‍💻 Lines of code changed
           plugin_lines: yes
-          # 此插件为文档中的 🙋 Introduction
           plugin_introduction: yes
-          # 此插件为文档中的 🎫 Gists
-          # plugin_gists: yes
-          # 此插件为文档中的 💫 Star lists
-          # plugin_starlists: yes
-          # plugin_starlists_limit_repositories: 2
-          # plugin_starlists_languages: yes
-          # plugin_starlists_limit_languages: 8
-          # plugin_starlists_only: Awesome
 
       # 📓 Featured repositories
       - name: Pinned repositories
@@ -49,7 +58,6 @@ jobs:
           token: ${{ secrets.METRICS }}
           base: ""
           plugin_repositories: yes
-          # plugin_repositories_pinned: 2
           plugin_repositories_featured: gaozheng2001/rcsmbvd, gaozheng2001/Kinova-Gen3-Gen3lite-Detector
 
       # 🈷️ Languages activity
@@ -82,11 +90,8 @@ jobs:
         with:
           filename: github-metrics/isocalendar.fullyear.svg
           token: ${{ secrets.METRICS }}
-          # 不添加基础信息
           base: ""
-          # 使用此插件
           plugin_isocalendar: yes
-          # 设置成显示整年
           plugin_isocalendar_duration: full-year
 
       # 🌟 Recently starred repositories
@@ -98,21 +103,9 @@ jobs:
           base: ""
           plugin_stars: yes
           plugin_stars_limit: 10
-          
-      # 💡 Coding habits and activity
-      - name: Recent activity charts
-        uses: lowlighter/metrics@latest
-        with:
-          filename: github-metrics/habits.charts.svg
-          token: ${{ secrets.METRICS }}
-          base: ""
-          plugin_habits: yes
-          plugin_habits_facts: no
-          plugin_habits_charts: yes
-          config_timezone: Europe/Paris
-          
+             
       # 🎟️ Follow-up of issues and pull requests 
-      - name: Indepth analysis
+      - name: Follow-up Indepth analysis
         uses: lowlighter/metrics@latest
         with:
           filename: github-metrics/followup.indepth.svg
@@ -164,32 +157,7 @@ jobs:
           plugin_calendar: yes
           plugin_calendar_limit: 0
 
-      # 🏆 Achievements
-      #- name: Compact display
-      #  uses: lowlighter/metrics@latest
-      #  with:
-      #    filename: github-metrics/achievements.compact.svg
-      #    token: ${{ secrets.METRICS }}
-      #    base: ""
-      #    plugin_achievements: yes
-      #    plugin_achievements_only: >-
-      #      polyglot, stargazer, sponsor, deployer, member, maintainer, developer,
-      #      scripter, packager, explorer, infographile, manager
-      #    plugin_achievements_display: compact
-      #    plugin_achievements_threshold: X
-
-      # 📰 Recent activity
-      - name: Recent activity
-        uses: lowlighter/metrics@latest
-        with:
-          filename: github-metrics/activity.svg
-          token: ${{ secrets.METRICS }}
-          base: ""
-          plugin_activity: yes
-          plugin_activity_limit: 5
-          plugin_activity_days: 0
-          plugin_activity_filter: issue, pr, release, fork, review, ref/create
-          
+      # 🐍 Python snippet
       - name: Python snippet of the day
         uses: lowlighter/metrics@latest
         with:

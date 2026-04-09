@@ -14,6 +14,8 @@
   <div align="center">
     <!-- 使用你自己 Action 每天自动生成的核心数据图表 -->
     <img src="github-metrics/base.svg" width="48%" />
+  </div>
+  <div align="center">
     <!-- 使用你自动生成的最常用语言比例图表 -->
     <img src="github-metrics/languages.indepth.svg" width="48%" />
   </div>

@@ -11,26 +11,11 @@
 ## Hi, 👋 I'm GAO ZHENG(gaozheng2001)
 
 <p align="center">
-  <!-- 原有的状态卡片（已注释） -->
-  <!-- 
-  <a href="https://github.com/gaozheng2001" class="rich-diff-level-one">
-    <img src="https://github-readme-stats.vercel.app/api?username=gaozheng2001&theme=ambient_gradient" alt="gaozheng's stats">
-  </a>  
-  -->
-
-  <!-- 原有的 Metrics 本地图片（已注释） -->
-  <!--
-  <div align="center"> <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=gaozheng2001&hide_title=true&hide_border=true&layout=compact&langs_count=6&text_color=000&icon_color=f[...]
-  -->
-  <!-- <div align="center"> <img src="github-metrics/languages.indepth.svg" /> </div> -->
-  <!-- <div align="center"> <img src="github-metrics/achievements.compact.svg" /> </div> -->
-
-  <!-- 新增的统计面板区域（合并了核心数据和最常用语言） -->
   <div align="center">
-    <!-- 核心数据卡片 -->
-    <img src="https://github-readme-stats.vercel.app/api?username=gaozheng2001&show_icons=true&theme=radical&hide_border=true" width="48%" />
-    <!-- 最常用语言比例 -->
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=gaozheng2001&layout=compact&theme=radical&hide_border=true" width="48%" />
+    <!-- 使用你自己 Action 每天自动生成的核心数据图表 -->
+    <img src="github-metrics/base.svg" width="48%" />
+    <!-- 使用你自动生成的最常用语言比例图表 -->
+    <img src="github-metrics/languages.indepth.svg" width="48%" />
   </div>
 
   <br>

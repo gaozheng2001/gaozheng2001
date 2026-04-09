@@ -7,6 +7,9 @@ on:
 jobs:
   github-metrics:
     runs-on: ubuntu-latest
+    # 添加以下这两行环境变量即可消除 Warning
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     environment: 
       name: production
     permissions:
